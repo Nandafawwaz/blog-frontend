@@ -2,7 +2,7 @@ import axios from 'axios';
 
 async function getData() {
     try {
-      const response = await axios.get('http://localhost:3000/db-demo/');
+      const response = await axios.get('https://blog-backend-uvuwemyala-et.a.run.app/db-demo/');
       return response;
     } catch (error) {
       console.error(error);
@@ -11,7 +11,7 @@ async function getData() {
 
   const postData = async (title,content) => {
     try {
-      const response = await axios.post('http://localhost:3000/db-demo/post', {
+      const response = await axios.post('https://blog-backend-uvuwemyala-et.a.run.app/db-demo/post', {
           id : (new Date()).getTime(),
           title: title,
           content: content,
@@ -25,7 +25,7 @@ async function getData() {
 
   const putData = async (id,title,content) => {
     try {
-      const response = await axios.put('http://localhost:3000/db-demo/put', {
+      const response = await axios.put('https://blog-backend-uvuwemyala-et.a.run.app/db-demo/put', {
           id : id,
           title: title,
           content: content,
@@ -40,7 +40,7 @@ async function getData() {
 
   const delData = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/db-demo/delete/${id}`).then(()=>{console.log("delete data")}) ;
+      const response = await axios.delete(`https://blog-backend-uvuwemyala-et.a.run.app/delete/${id}`).then(()=>{console.log("delete data")}) ;
       console.log(id);
     } catch (error) {
       console.error(error);
